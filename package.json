@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.3",
+    "typescript": "^4.6.4"
+  },
+  "scripts": {
+    "dev": "ts-node-dev src/server.ts"
+  },
+  "name": "BackendDeveloperTest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/matheusrigon/BackendDeveloperTest.git",
+  "author": "matheusrigon <matheusjacobirigon@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node-dev": "^1.1.8"
+  }
+}
