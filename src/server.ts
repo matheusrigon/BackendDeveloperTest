@@ -7,7 +7,7 @@ const Video = require("./Models/Video");
 
 app.use(bodyParser.json());
 
-mongoose.connect("mongodb://localhost/Test")
+mongoose.connect("mongodb://db/Test")
 .then(() => {console.log("Mongo connected!");})
 .catch((e) => {console.log("Error: " + e);});
 

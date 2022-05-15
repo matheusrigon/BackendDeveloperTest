@@ -1,0 +1,25 @@
+version: "3.2"
+services:
+  db:
+    image: mongo:5.0
+    container_name: db
+    restart: always
+    ports:
+      - 27017:27017
+  api:
+    image: node:latest
+    container_name: api
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    command: bash -c "yarn install && yarn dev"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
