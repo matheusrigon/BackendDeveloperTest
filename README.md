@@ -4,6 +4,9 @@ NodeJsMongoApi
 # Run docker
 docker-compose up -d
 
+# Postman collection
+https://www.getpostman.com/collections/6b3f713b0812596f144c
+
 # Endpoints:
 ```
 CreateVideo
