@@ -51,7 +51,7 @@ app.put("/video", async (request, response) => {
     if(!request.body.name)
       response.send("Field 'name' requested to update!");
     else  
-      Video.findOneAndUpdate({username: request.body.name}, { $set: request.body }, { new: true })
+      Video.findOneAndUpdate({name: request.body.name}, { $set: request.body }, { new: true })
       .then(() => console.log("Video updated!"));
 
   response.send("Video updated!");
