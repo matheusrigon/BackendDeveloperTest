@@ -1,6 +1,9 @@
 # BackendDeveloperTest
 NodeJsMongoApi
 
+# Run docker
+docker-compose up -d
+
 # Endpoints:
 ```
 CreateVideo
