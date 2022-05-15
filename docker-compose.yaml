@@ -12,6 +12,7 @@ services:
     restart: always
     depends_on:
       - db
+      - mongodb_migration
     ports:
       - 3000:3000
     volumes:
@@ -23,3 +24,7 @@ services:
       options:
         max-size: "10m"
         max-file: "5"
+  mongodb_migration:
+    build: './mongoInit'
+    depends_on:
+      - db

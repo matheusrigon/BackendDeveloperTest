@@ -1,5 +1,5 @@
 import express from "express"
-import mongoose from "mongoose"
+import mongoose, { Connection } from "mongoose"
 import bodyParser from "body-parser"
 
 const app = express();
@@ -18,6 +18,10 @@ app.get("/video", async (request, response) => {
     response.send("No video found!");
   else  
     response.send(video);
+});
+
+app.get("/health-check", async (request, response) => {  
+  response.send(mongoose.connection.readyState == 1 ? "Connected!" : "Not connected");
 });
 
 app.get("/videoPaginated", async (request, response) => {
